@@ -26,14 +26,3 @@
     margin-right: auto;
     width: 50%;
   }
-
-  th{
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    padding: 5px 10px;
-  }
-
-  body{
-    background-color: rgb(13, 12, 12);
-  }
