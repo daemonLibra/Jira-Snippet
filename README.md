@@ -1,7 +1,7 @@
-# Jira Copy Issue Id + Title
-
-<p align="center">
-  <img src="./icons/logo_64.png">
-</p>
-
-Makes it possible to copy the issue id + title with one button.
+# Jira Copy Button: Task Id (with link) + Title 
+ 
+<p align="center"> 
+  <img src="./icons/logo_64.png"> 
+</p> 
+ 
+Add a button to copy: Task Id (with link) + Title, or doble-click to copy: Only Task Id

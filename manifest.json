@@ -1,16 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "Jira Copy Issues Id and Title",
+  "manifest_version": 3,
+  "name": "Jira Copy Title Button",
   "version": "1.4",
-  "description": "Makes it possible to copy the jira issue id + title with one button",
-  "homepage_url": "https://github.com/daemonLibra/JiraIssueCopyData",
+  "description": "Add a button to copy: Task Id (with link) + Title, or doble-click to copy: Only Task Id",
+  "homepage_url": "https://github.com/RASK18/JiraCopyTitleButton",
   "author": "https://github.com/daemonLibra",
   "icons": {
     "48": "icons/logo_48.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "icons/logo_32.png",
-    "default_title": "Jira Copy Id + Title",
+    "default_title": "Jira Copy Title Button",
     "default_popup": "popup/info.html"
   },
   "content_scripts": [
@@ -27,4 +27,4 @@
       ]
     }
   ]
-}
+} 
