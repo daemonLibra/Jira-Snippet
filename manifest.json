@@ -1,25 +1,31 @@
 {
-  "manifest_version": 2,
-  "name": "Jira Copy Issues Id and Title",
-  "version": "2",
-  "description": "Makes it possible to copy the jira issue id + title with one button",
+  "manifest_version": 3,
+  "name": "Jira Snippet",
+  "version": "2.0",
+  "description": "Jira Snippet is a browser extension that streamlines your Jira experience by allowing you to quickly copy issue information in a customizable format. It's easy to configure and enables you to choose what data you want to include when copying, such as issue title, ID, status, and more. The add-on integrates seamlessly with both Jira Cloud and Server and is compatible with Chrome, Firefox, Edge and Opera browsers.",
   "homepage_url": "https://github.com/daemonLibra/JiraIssueCopyData",
   "author": "https://github.com/daemonLibra",
   "icons": {
     "48": "icons/logo_48.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "icons/logo_32.png",
-    "default_title": "Jira Copy Id + Title",
+    "default_title": "Jira Snippet",
     "default_popup": "popup/info.html"
+  },
+  "background": {
+    "scripts": ["scripts/contextMenu.js"]
   },
   "content_scripts": [
     {
       "matches": [
-        "*://*.atlassian.net/*"
+        "*://*.atlassian.net/*",
+        "*://*.atlassian.com/*"
       ],
       "js": [
-        "copybtn.js"
+        "scripts/storage-utils.js",
+        "scripts/settings.js",
+        "scripts/copybtn.js"
       ],
       "run_at": "document_start",
       "css": [
@@ -28,6 +34,7 @@
     }
   ],
   "permissions": [
-    "storage"
+    "storage",
+    "contextMenus"
   ]
 }

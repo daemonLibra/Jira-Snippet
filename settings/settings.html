@@ -3,120 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/settingsstyle.css">
     <title>Settings</title>
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background-color: rgb(13, 12, 12);
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        margin: 0;
-        padding: 0;
-      }
-  
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 800px;
-        margin: 20px;
-        padding: 20px;
-        border: 1px solid white;
-        border-radius: 5px;
-      }
-  
-      .title {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-  
-      .input-label {
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-  
-      .input {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 14px;
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 20px;
-        background-color: #333;
-        color: white;
-        border: 1px solid white;
-        border-radius: 3px;
-      }
-  
-      .save-button {
-        background-color: #333;
-        color: white;
-        font-size: 14px;
-        padding: 5px 10px;
-        border: none;
-        cursor: pointer;
-        border-radius: 3px;
-        transition: background-color 0.3s;
-        margin-bottom: 10px;
-      }
-  
-      .save-button:hover {
-        background-color: #555;
-      }
-  
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-      }
-  
-      th, td {
-        border: 1px solid white;
-        padding: 5px;
-        text-align: left;
-      }
-  
-      th {
-        font-weight: bold;
-      }
-  
-      .description {
-        font-size: 14px;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-
-    .token {
-      background-color: rgba(0, 0, 0, 0.1);
-      cursor: grab;
-      padding: 2px 5px;
-    }
-
-    .token:hover {
-      background-color: #555;
-    }
-
-    .logo {
-      display: block;
-      margin: 0 auto 20px;
-      width: 64px;
-      height: 64px;
-    }
-
-    </style>
-    <script src="settings.js"></script>
+    <script src="../scripts/storage-utils.js"></script>
+    <script src="../scripts/settings.js"></script>
   </head>
 <body>
   <div class="container">
-    <img src="../icons/logo_64.png" alt="logo" class="logo">
-    <h1 class="title">Settings</h1>
-    <p class="description">Click on a placeholder in the table below to insert it at the current cursor position.
+    <img src="../icons/logo_banner.png" alt="logo" class="logo">
+    <p class="description">Click on a placeholder in the table below to insert it in the input field.
       You can also drag and drop the placeholders into the input field.</p>
     <label class="input-label" for="format">Output Format:</label>
-    <input type="text" id="format" class="input" value="" placeholder="{key} - {summary}">
+    <input type="text" id="format" class="input" value="" placeholder="[{key}]  {title}">
     <button class="save-button" id="save">Save</button>
     <table>
       <thead>
@@ -161,6 +59,6 @@
       </tbody>
     </table>
   </div>
-  <script src="draganddrop.js"></script>
+  <script src="../scripts/draganddrop.js"></script>
 </body>
 </html>

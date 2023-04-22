@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #444654;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+  
+  .save-button {
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .save-button:hover {
+    background-color: #555;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+  }
+  
+  th, td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .description {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .token {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    padding: 2px 5px;
+  }
+  
+  .token:hover {
+    background-color: #747171;
+    font-weight: bold;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+  }
