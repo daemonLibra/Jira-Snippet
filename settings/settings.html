@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/settingsstyle.css">
+    <title>Settings</title>
+    <script src="../scripts/storage-utils.js"></script>
+    <script src="../scripts/settings.js"></script>
+  </head>
+<body>
+  <div class="container">
+    <img src="../icons/logo_banner.png" alt="logo" class="logo">
+    <p class="description">Click on a placeholder in the table below to insert it in the input field.
+      You can also drag and drop the placeholders into the input field.</p>
+    <label class="input-label" for="format">Output Format:</label>
+    <input type="text" id="format" class="input" value="" placeholder="[{key}]  {title}">
+    <button class="save-button" id="save">Save</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Placeholder</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="token">{key}</td>
+          <td>Issue key (e.g., ABC-123)</td>
+        </tr>
+        <tr>
+          <td class="token">{title}</td>
+          <td>Issue title / summary</td>
+        </tr>
+        <tr>
+          <td class="token">{description}</td>
+          <td>Issue description</td>
+        </tr>
+        <tr>
+          <td class="token">{type}</td>
+          <td>Issue type (e.g., Bug, Task, Story)</td>
+        </tr>
+        <tr>
+          <td class="token">{priority}</td>
+          <td>Issue priority</td>
+        </tr>
+        <tr>
+          <td class="token">{status}</td>
+          <td>Issue status</td>
+        </tr>
+        <tr>
+          <td class="token">{reporter}</td>
+          <td>Issue reporter's display name</td>
+        </tr>
+        <tr>
+          <td class="token">{assignee}</td>
+          <td>Issue assignee's display name</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="../scripts/draganddrop.js"></script>
+</body>
+</html>
