@@ -26,7 +26,7 @@ function getIssueDataAndWriteToClipboard(issueId)
     const issueTitle = data['fields']['summary'];
     const issueDescription = data['fields']['description'];
     const issueType = data['fields']['issuetype'].name;
-    const issuePriority = data['fields']['priority'].name;
+    const issuePriority = data['fields']['priority']?.name;
     const issueStatus = data['fields']['status'].name;
     const issueReporter = data['fields']['reporter'].displayName;
     const issueAssignee = data['fields']['assignee'] ? data['fields']['assignee'].displayName : 'Unassigned';
