@@ -54,15 +54,6 @@ function notify(message)
 }
 
 function createButton(parent) {
-
-  const issueId = getIssueId();
-
-  if(issueId == null)
-  {
-    console.log("Error: No Issue id found!");
-    return;
-  }
-  
   const buttonText = 'Jira Snippet';
   const button = document.createElement("button");
   button.textContent = buttonText;
@@ -71,6 +62,10 @@ function createButton(parent) {
   parent.appendChild(button);
 
   button.onclick = function () {
+        const issueId = getIssueId();
+        if(issueId == null) {
+          button.textContent = 'Error: No Issue id found!';
+        }
         getIssueDataAndWriteToClipboard(issueId);
         button.textContent = 'Text has been copied!';
         setTimeout(function () {
@@ -83,7 +78,6 @@ var observer = new MutationObserver(function (mutations, me) {
   var parent = document.getElementsByClassName('gn0msi-0 cqZBrb')[0] ??
                document.getElementsByClassName('_otyr1y44 _ca0q1y44 _u5f3idpf _n3td1y44 _19bvidpf _1e0c116y')[0] ??
                document.getElementsByClassName('_otyr1b66 _1yt4swc3 _1e0c116y')[0];
-  
   if (parent) {
     if (!document.getElementById('CopyBtnJiraId')) {
       createButton(parent);
