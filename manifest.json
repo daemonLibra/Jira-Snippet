@@ -14,7 +14,7 @@
     "default_popup": "popup/info.html"
   },
   "background": {
-    "scripts": ["scripts/contextMenu.js"]
+    "service_worker": "scripts/contextMenu.js"
   },
   "content_scripts": [
     {
