@@ -30,6 +30,7 @@ function getIssueDataAndWriteToClipboard(issueId)
     const issueStatus = data['fields']['status'].name;
     const issueReporter = data['fields']['reporter'].displayName;
     const issueAssignee = data['fields']['assignee'] ? data['fields']['assignee'].displayName : 'Unassigned';
+    const issueUrl = `${window.location.origin}/browse/${issueId}`;
 
     storageGet('format').then(function (storageData) {
       const format = storageData.format || '[{key}] {title}';
@@ -42,6 +43,7 @@ function getIssueDataAndWriteToClipboard(issueId)
         .replaceAll('{status}', issueStatus)
         .replaceAll('{reporter}', issueReporter)
         .replaceAll('{assignee}', issueAssignee)
+        .replaceAll('{url}', issueUrl)
       
         navigator.clipboard.writeText(outputText);
     });
