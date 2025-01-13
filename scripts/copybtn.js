@@ -5,8 +5,13 @@ function getIssueId() {
   let issueKey;
 
   if (document.URL.includes(searchParam)) {
-    let match = document.URL.match(/\&selectedIssue=(.*?)(?=&|$)/)[1];
-    issueKey = match;
+    let match = document.URL.match(/[?&][selectedIssue]=([^&]*)/);
+    if (match) {
+      issueKey = match[1];
+      console.log(issueKey);
+    } else {
+      console.error("Failed to extract the 'selectedIssue' in the URL.");
+    }
   } else {
     let match = document.title.match(/\[(.*?)\]/)[1];
     issueKey = match;
