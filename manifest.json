@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Jira Snippet",
-  "version": "2.3",
+  "version": "2.4",
   "description": "Jira Snippet: Quick copy add-on for customizable issue data. Integrates with Jira Cloud on Chrome, Firefox, Edge.",
   "homepage_url": "https://github.com/daemonLibra/JiraIssueCopyData",
   "author": "https://github.com/daemonLibra",
