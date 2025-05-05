@@ -5,7 +5,7 @@ function getIssueId() {
   let issueKey;
 
   if (document.URL.includes(searchParam)) {
-    let match = document.URL.match(/[#?]selectedIssue=(.*?)(?=&|$)/);
+    let match = document.URL.match(/selectedIssue=(.*?)(?=&|$)/);
     if (match) {
       issueKey = match[1];
       console.log(issueKey);
